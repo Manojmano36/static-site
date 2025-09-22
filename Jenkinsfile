@@ -1,9 +1,10 @@
 pipeline {
   agent any
-  environment {
+    environment {
     DOCKERHUB_CRED = 'dockerhub-creds'
     IMAGE_NAME = 'your-dockerhub-username/static-site' // <-- replace username
   }
+
   stages {
     stage('Checkout') {
       steps { checkout scm }
